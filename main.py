@@ -5,8 +5,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 
-@app.route("/<path:path>", methods=["GET", "POST", "PUT",
-"DELETE"])
+@app.route("/<path:path>", methods=["GET", "POST", "PUT", "DELETE"])
 async def main(path):
     if request.get_data():
         payload = request.get_json()
